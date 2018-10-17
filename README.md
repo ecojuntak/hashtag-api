@@ -4,7 +4,9 @@
 - Install SQLite Database
 
 ## Download dependencies
+```
 go get
+```
 
 ## Run the migration
 ```
