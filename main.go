@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/ecojuntak/feeding-my-rabbit/hastag-api/data"
+	"github.com/ecojuntak/hastag-api/data"
 	"github.com/gorilla/mux"
 	"github.com/streadway/amqp"
 	"github.com/urfave/cli"
