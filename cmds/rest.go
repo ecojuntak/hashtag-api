@@ -44,8 +44,15 @@ func SingleHashtagHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write(payload)
 }
 
+func RootHandler(w http.ResponseWriter, r *http.Request) {
+	payload, _ := json.Marshal("Hashtag Service")
+	w.Header().Set("Content-Type", "application/json")
+	w.Write([]byte(payload))
+}
+
 func StartREST() {
 	r := mux.NewRouter()
+	r.HandleFunc("/", RootHandler)
 	r.HandleFunc("/hashtags", AllHashtagHandler)
 	r.HandleFunc("/hashtags/{name}", SingleHashtagHandler)
 
